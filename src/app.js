@@ -13,10 +13,5 @@ app.use(bodyParser.json());
 app.use("/app/clients", clientRoutes);
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerSpec));
 
-// Configuración del puerto
-const PORT = process.env.PORT || 5002; // Usa el puerto proporcionado por Railway o 5002 como predeterminado
-
-// Inicia el servidor
-app.listen(PORT, () => {
-  console.log(`Servidor escuchando en el puerto ${PORT}`);
-});
+// Exporta la instancia de Express
+export default app;
